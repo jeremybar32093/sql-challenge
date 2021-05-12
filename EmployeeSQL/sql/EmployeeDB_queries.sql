@@ -59,3 +59,15 @@ FROM dept_emp a
   LEFT JOIN department c ON c.dept_no = a.dept_no
 WHERE 
   c.dept_name = 'Sales';
+  
+--7.) List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
+ SELECT 
+    a.emp_no AS "Employee Number"
+  , b.last_name AS "Last Name"
+  , b.first_name AS "First Name"
+  , c.dept_name AS "Department Name"
+FROM dept_emp a
+  LEFT JOIN employee b ON b.emp_no = a.emp_no
+  LEFT JOIN department c ON c.dept_no = a.dept_no
+WHERE 
+  c.dept_name IN ('Sales','Development');

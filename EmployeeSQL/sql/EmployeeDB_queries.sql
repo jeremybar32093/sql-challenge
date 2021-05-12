@@ -8,3 +8,10 @@ SELECT
 FROM employee e
   LEFT JOIN salary s ON s.emp_no = e.emp_no;
 
+--2.) List first name, last name, and hire date for employees who were hired in 1986.
+SELECT
+    first_name AS "First Name"
+  , last_name AS "Last Name"
+  , hire_date AS "Hire Date"
+FROM employee
+WHERE EXTRACT(YEAR FROM hire_date) = 1986;

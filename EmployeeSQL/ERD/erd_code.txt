@@ -3,7 +3,7 @@
 employee
 -
 emp_no int PK 
-emp_title varchar(255) FK >- title.title_id
+emp_title_id varchar(5) FK >- title.title_id
 birth_date date
 first_name varchar(255)
 last_name varchar(255)

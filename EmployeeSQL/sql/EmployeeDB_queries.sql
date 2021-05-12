@@ -26,3 +26,14 @@ SELECT
 FROM dept_manager a
   LEFT JOIN department b ON b.dept_no = a.dept_no
   LEFT JOIN employee c ON c.emp_no = a.emp_no;
+  
+--4.) List the department of each employee with the following information: employee number, last name, first name, and department name.
+SELECT 
+    a.emp_no AS "Employee Number"
+  , b.last_name AS "Last Name"
+  , b.first_name AS "First Name"
+  , a.dept_no AS "Department Number"
+  , c.dept_name AS "Department Name"
+FROM dept_emp a
+  LEFT JOIN employee b ON b.emp_no = a.emp_no
+  LEFT JOIN department c ON c.dept_no = a.dept_no

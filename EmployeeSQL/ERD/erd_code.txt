@@ -1,0 +1,44 @@
+# https://app.quickdatabasediagrams.com/#/
+##########################
+employee
+-
+emp_no int PK 
+emp_title varchar(255) FK >- title.title_id
+birth_date date
+first_name varchar(255)
+last_name varchar(255)
+sex varchar(1)
+hire_date date
+
+department
+-
+dept_no varchar(4) PK
+dept_name varchar(255)
+
+dept_manager
+-
+dept_no varchar(4) FK >- department.dept_no
+emp_no PK int FK - employee.emp_no
+
+dept_emp
+-
+emp_no PK int FK >- employee.emp_no
+dept_no PK varchar(4) FK >- department.dept_no 
+
+salary
+-
+emp_no PK int FK - employee.emp_no
+salary numeric(18,2)
+
+title
+-
+title_id varchar(5) PK
+title varchar(255)
+
+# Assumptions:
+# 1.) An employee can be the manager of only 1 department
+#     , but an employee can work in multiple departments
+# 2.) A single department can have multiple managers
+# 3.) Department ID numbers can only be 4 characters long
+# 4.) Sex can only be 1 character long
+# 5.) Title ID numbers can only be 5 characters long

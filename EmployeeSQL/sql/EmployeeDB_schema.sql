@@ -4,7 +4,7 @@
 
 CREATE TABLE "employee" (
     "emp_no" int   NOT NULL,
-    "emp_title" varchar(255)   NOT NULL,
+    "emp_title_id" varchar(5)   NOT NULL,
     "birth_date" date   NOT NULL,
     "first_name" varchar(255)   NOT NULL,
     "last_name" varchar(255)   NOT NULL,
@@ -55,7 +55,7 @@ CREATE TABLE "title" (
      )
 );
 
-ALTER TABLE "employee" ADD CONSTRAINT "fk_employee_emp_title" FOREIGN KEY("emp_title")
+ALTER TABLE "employee" ADD CONSTRAINT "fk_employee_emp_title_id" FOREIGN KEY("emp_title_id")
 REFERENCES "title" ("title_id");
 
 ALTER TABLE "dept_manager" ADD CONSTRAINT "fk_dept_manager_dept_no" FOREIGN KEY("dept_no")

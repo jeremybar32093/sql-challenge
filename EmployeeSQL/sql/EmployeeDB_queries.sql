@@ -15,3 +15,14 @@ SELECT
   , hire_date AS "Hire Date"
 FROM employee
 WHERE EXTRACT(YEAR FROM hire_date) = 1986;
+
+--3.) List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+SELECT 
+    a.dept_no AS "Department Number"
+  , b.dept_name AS "Department Name"
+  , a.emp_no AS "Manager Employee Number"
+  , c.last_name AS "Manager Last Name"
+  , c.first_name AS "Manager First Name"
+FROM dept_manager a
+  LEFT JOIN department b ON b.dept_no = a.dept_no
+  LEFT JOIN employee c ON c.emp_no = a.emp_no;

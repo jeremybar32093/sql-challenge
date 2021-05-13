@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# SQL Credentials - Added by Jeremy 20210512
+sql_creds.py

@@ -1,7 +1,7 @@
 # sql-challenge
 
 This file takes serveral data files to create a data model and postgreSQL database relating to employee and salary data. Data files can be found in the **data** folder. Outputs based off of this dataset are as follows:
-* ERD diagram created using the open soource [quick database diagrams app](https://app.quickdatabasediagrams.com/#/)
+* ERD diagram created using the open source [quick database diagrams app](https://app.quickdatabasediagrams.com/#/)
   * This diagram can be found in the **ERD** folder
   * Based off of this diagram, a postgreSQL file, located in the **sql** folder, was generated also using the app. This was then used to create a postgreSQL database with all relevant tables
   * After creating the table schema, the native import/export functionality in pgAdmin was used to import the files in the **data** folder
